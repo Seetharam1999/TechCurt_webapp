@@ -1,0 +1,1101 @@
+
+  
+
+
+  html body .container-fluid.body-content {
+    position: absolute;
+    top: 50px;
+    bottom: 30px;
+    right: 0;
+    left: 0;
+    overflow-y: auto;
+  }
+   
+  
+  p{
+    font-size:16px;
+    text-align: justify;
+    padding-right:10px;
+     }
+     
+     a:hover{
+     text-decoration:none;
+     color:#000;
+     }
+     
+   
+  .fa,.far{
+  color:#00c4cc;
+  }
+  .one{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/bg2.jpg") rgba(0,0,0,0.3);
+      background-size:cover;
+      background-blend-mode: multiply;
+    
+    }
+    .two{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/tablet.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    
+    }
+    
+    .three{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/camera.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    
+    }
+    .four{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/cars.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    
+    }
+    .five{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/tv.jpg") rgba(0,0,0,0.8);
+      background-size:cover;
+      background-blend-mode: multiply;
+    
+    }
+    .six{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/apps1.jpg") rgba(0,0,0,0.8);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .seven{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/mobile1.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .eight{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/smarthome.jpg") rgba(0,0,0,0.6);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .nine{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/gaming.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .ten{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/speaker.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .eleven{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/drones.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .twelve{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/appliances.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .thirteen{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/laptops.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .fourteen{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/headphones.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .fifteen{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/pc.jpeg") rgba(0,0,0,0.7);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .sixteen{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/streaming.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+    .seventeen{
+    color:#fff;
+     font-size:18px;
+     background:url("/assets/images/wearables.jpg") rgba(0,0,0,0.5);
+      background-size:cover;
+      background-blend-mode: multiply;
+    }
+  /*Extra small devices (portrait phones, less than 576px)*/
+
+@media (max-width: 575.98px) {
+  #stableheader{
+    display:inline-block;
+    width: 100%;
+    height:100%;  
+    top:1;
+    right: 0;
+    left:0;
+    padding-bottom: 4vh;
+    border-radius:0px 0px 30px 30px;
+    box-shadow: 0px 5px 5px -2px #d3d3d3;
+
+  }
+  .fa-arrow-right{
+    color:#00c4cc;
+position: relative;
+display: block;
+    font-size:20px;
+    margin-top:-7%;
+    margin-left:90vw;
+    }
+    .menucontent{
+      width:100%;
+      background-color:#fff;
+      height:98vh;
+      overflow-x: hidden;
+      border-top-right-radius: 4vh;
+      border-top-left-radius: 4vh;
+     
+    }
+      .settingsbtn{
+        background-color:#fff;
+        margin-top:50px;
+        width:100%;
+        height:10%;
+        text-align:center;
+        }
+        .settingsimg{
+        width:70px;
+        height:70px;
+        margin-top:-7%;
+        }
+        .settingprofile{
+        text-align:center;
+        font-size:15px;
+        }
+        .topictext{
+          margin-left:5%;
+          font-size:20px;
+          margin-top:10%;
+          }
+          .covidimg{
+          margin-top:2%;
+          width:80px;
+          height:80px;
+          margin-right:5%;
+          margin-left:5%;
+          }
+          .newimg{
+          margin-top:2%;
+          width:80px;
+          height:80px;
+          margin-right:5%;
+          margin-left:5%;
+          }
+          .bookmarkimg{
+          margin-top:2%;
+          width:80px;
+          height:80px;
+          margin-right:5%;
+          margin-left:5%;
+          }
+          .categorytext{
+            margin-left:5%;
+            font-size:20px;
+            margin-top:5%;
+            }
+            .covidmenu{
+            margin-right:5%;
+            margin-left:9%;
+            }
+            .allnewmenu{
+            margin-right:5%;
+            margin-left:11%;
+            }
+            .bookmarkmenu{
+            margin-right:3%;
+            margin-left:10%;
+            }
+            .left{
+            display:none;
+            }
+            .right{
+            display:none;
+            }
+            .column{
+            display:block;
+            max-width:90%;
+              float: left;
+              width: 33%;
+              padding: 10px;
+            
+            }
+            
+            .accordion {
+             
+              color: #444;
+              cursor: pointer;
+              padding: 10px;
+              width: 90px;
+              border: none;
+              text-align: center;
+              outline: none;
+              font-size: 15px;
+              transition: 0.4s;
+              height:90px;
+              margin-top:10px;
+              border-radius:20px;
+              margin-left:10px;
+                    box-shadow: 0px 10px 10px -2px #888888;
+            }
+            
+            .active, .accordion:hover {
+              background-color: #ccc;
+            }
+            
+            .panel {
+              border-radius:30px;
+              margin-left:0px;
+            width:120px;
+            
+              padding: 0 18px;
+              background-color:#fff;
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.2s ease-out;
+              border-radius:30px;
+            }
+            li{
+            margin-left:-8vw;
+            width:30vw;
+                    box-shadow: 0px 5px 5px -2px #d3d3d3;
+            border-radius:5px;
+            margin-top:15px;
+            height:35px;
+            line-height:35px;
+            text-align:center;
+            }
+            li:hover{
+            color:#00c4cc;
+            border-left:2px solid #00c4cc;
+            margin-left:-10vw;
+              transition:0.2s ease-out;
+            
+            }
+            .one{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/bg2.jpg") rgba(0,0,0,0.3);
+              background-size:cover;
+              background-blend-mode: multiply;
+            
+            }
+            .two{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/tablet.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            
+            }
+            
+            .three{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/camera.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            
+            }
+            .four{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/cars.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            
+            }
+            .five{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/tv.jpg") rgba(0,0,0,0.8);
+              background-size:cover;
+              background-blend-mode: multiply;
+            
+            }
+            .six{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/apps1.jpg") rgba(0,0,0,0.8);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .seven{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/mobile1.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .eight{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/smarthome.jpg") rgba(0,0,0,0.6);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .nine{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/gaming.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .ten{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/speaker.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .eleven{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/drones.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .twelve{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/appliances.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .thirteen{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/laptops.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .fourteen{
+            margin-left:10px;
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/headphones.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .fifteen{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/pc.jpeg") rgba(0,0,0,0.7);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .sixteen{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/streaming.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .seventeen{
+            color:#fff;
+             font-size:12px;
+             background:url("/assets/images/wearables.jpg") rgba(0,0,0,0.5);
+              background-size:cover;
+              background-blend-mode: multiply;
+            }
+            .column {
+              float: left;
+              width: 33%;
+              padding: 10px;
+             
+            }
+              
+            .panel{
+              border-radius:30px;
+              margin-left:25px;
+            width:200px;
+              padding: 0 18px;
+              background-color:#fff;
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.2s ease-out;
+              border-radius:30px;
+            }
+            li{
+            margin-left:-15%;
+            width:10vw;
+                    box-shadow: 0px 5px 5px -2px #d3d3d3;
+            border-radius:5px;
+            margin-top:5px;
+            text-align:center;
+            line-height: 30px;
+            height:30px;
+            }
+            li:hover{
+            color:#00c4cc;
+            border-left:2px solid #00c4cc;
+            margin-left:-25%;
+              transition:0.2s ease-out;
+            
+            }
+           
+            .headtext{
+              color:#888888;
+              font-size:18px;
+              margin-left:3%;
+              margin-top:41px;
+              }
+                .topictext{
+              margin-left:5%;
+              font-size:20px;
+              margin-top:0px;
+              }
+              .covidimg{
+              margin-top:2%;
+              width:100px;
+              height:100px;
+              margin-right:10%;
+              margin-left:10%;
+              }
+              .newimg{
+              margin-top:2%;
+              width:100px;
+              height:100px;
+              margin-right:10%;
+              margin-left:10%;
+              }
+              .bookmarkimg{
+              margin-top:2%;
+              width:100px;
+              height:100px;
+              margin-right:10%;
+              margin-left:10%;
+              }
+              .categorytext{
+              margin-left:5%;
+              font-size:20px;
+              margin-top:5%;
+              }
+                                 
+         
+ }
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #stableheader{
+    display:absolute;
+    width: 60%;
+    height:100%;  
+    top:1;
+    right: 0;
+   
+    padding-bottom: 4vh;
+    border-radius:0px 0px 30px 30px;
+    box-shadow: 0px 5px 5px -2px #d3d3d3;
+    margin-left:20vw;
+
+  }
+  .fa-arrow-right{
+    color:#00c4cc;
+
+display: block;
+    font-size:20px;
+    margin-top:-6%;
+    margin-left:54vw;
+    }
+    .menucontent{
+      width:58%;
+      margin-left:21vw;
+      background-color:#fff;
+      height:calc(100vh - 8vh);
+      overflow-x: hidden;
+      border-top-right-radius: 4vh;
+      border-top-left-radius: 4vh;
+      }
+      .settingsbtn{
+        background-color:#fff;
+        margin-top:50px;
+        width:100%;
+        height:20%;
+        text-align:center;
+        }
+        .settingsimg{
+        width:60px;
+        height:60px;
+        margin-top:-8%;
+        }
+        .settingprofile{
+        text-align:center;
+        }
+        .accordion {
+    
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 17.5vw;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+          height:120px;
+          margin-top:18px;
+          border-radius:20px;
+          margin-left:1px;
+                box-shadow: 0px 10px 10px -2px #888888;
+        text-align:center;
+        }
+        
+        .active, .accordion:hover {
+          background-color: #ccc;
+        }
+        .column {
+          float: left;
+          width: 33%;
+          padding: 10px;
+         
+        }
+          
+        .panel{
+          border-radius:30px;
+          margin-left:25px;
+        width:200px;
+          padding: 0 18px;
+          background-color:#fff;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          border-radius:30px;
+        }
+        li{
+        margin-left:-15%;
+        width:10vw;
+                box-shadow: 0px 5px 5px -2px #d3d3d3;
+        border-radius:5px;
+        margin-top:5px;
+        text-align:center;
+        line-height: 30px;
+        height:30px;
+        }
+        li:hover{
+        color:#00c4cc;
+        border-left:2px solid #00c4cc;
+        margin-left:-25%;
+          transition:0.2s ease-out;
+        
+        }
+       
+        .headtext{
+          color:#888888;
+          font-size:18px;
+          margin-left:3%;
+          margin-top:15px;
+          }
+            .topictext{
+          margin-left:5%;
+          font-size:20px;
+          margin-top:0px;
+          }
+          .covidimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .newimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .bookmarkimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .categorytext{
+          margin-left:5%;
+          font-size:20px;
+          margin-top:5%;
+          }
+                    
+      
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #stableheader{
+    display:absolute;
+    width: 60%;
+    height:100%;  
+    top:1;
+    right: 0;
+   
+    padding-bottom: 4vh;
+    border-radius:0px 0px 30px 30px;
+    box-shadow: 0px 5px 5px -2px #d3d3d3;
+    margin-left:20vw;
+
+  }
+  .fa-arrow-right{
+    color:#00c4cc;
+
+display: block;
+    font-size:20px;
+    margin-top:-6%;
+    margin-left:54vw;
+    }
+    .menucontent{
+      width:58%;
+      margin-left:21vw;
+      background-color:#fff;
+      height:calc(100vh - 8vh);
+      overflow-x: hidden;
+      border-top-right-radius: 4vh;
+      border-top-left-radius: 4vh;
+      }
+      .settingsbtn{
+        background-color:#fff;
+        margin-top:50px;
+        width:100%;
+        height:20%;
+        text-align:center;
+        }
+        .settingsimg{
+        width:60px;
+        height:60px;
+        margin-top:-8%;
+        }
+        .settingprofile{
+        text-align:center;
+        }
+        .accordion {
+    
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 17.5vw;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+          height:120px;
+          margin-top:18px;
+          border-radius:20px;
+          margin-left:1px;
+                box-shadow: 0px 10px 10px -2px #888888;
+        text-align:center;
+        }
+        
+        .active, .accordion:hover {
+          background-color: #ccc;
+        }
+        .column {
+          float: left;
+          width: 33%;
+          padding: 10px;
+         
+        }
+          
+        .panel{
+          border-radius:30px;
+          margin-left:25px;
+        width:200px;
+          padding: 0 18px;
+          background-color:#fff;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          border-radius:30px;
+        }
+        li{
+        margin-left:-15%;
+        width:10vw;
+                box-shadow: 0px 5px 5px -2px #d3d3d3;
+        border-radius:5px;
+        margin-top:5px;
+        text-align:center;
+        line-height: 30px;
+        height:30px;
+        }
+        li:hover{
+        color:#00c4cc;
+        border-left:2px solid #00c4cc;
+        margin-left:-25%;
+          transition:0.2s ease-out;
+        
+        }
+        .headtext{
+          color:#888888;
+          font-size:18px;
+          margin-left:3%;
+          margin-top:15px;
+          }
+            .topictext{
+          margin-left:5%;
+          font-size:20px;
+          margin-top:0px;
+          }
+          .covidimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .newimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .bookmarkimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .categorytext{
+          margin-left:5%;
+          font-size:20px;
+          margin-top:5%;
+          }
+               
+            
+  
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #stableheader{
+    display:absolute;
+    width: 60%;
+    height:100%;  
+    top:1;
+    right: 0;
+   
+    padding-bottom: 4vh;
+    border-radius:0px 0px 30px 30px;
+    box-shadow: 0px 5px 5px -2px #d3d3d3;
+    margin-left:20vw;
+
+  }
+  .fa-arrow-right{
+    color:#00c4cc;
+
+display: block;
+    font-size:20px;
+    margin-top:-6%;
+    margin-left:54vw;
+    }
+    .menucontent{
+      width:58%;
+      margin-left:21vw;
+      background-color:#fff;
+      height:calc(100vh - 8vh);
+      overflow-x: hidden;
+      border-top-right-radius: 4vh;
+      border-top-left-radius: 4vh;
+      }
+      .settingsbtn{
+        background-color:#fff;
+        margin-top:50px;
+        width:100%;
+        height:20%;
+        text-align:center;
+        }
+        .settingsimg{
+        width:60px;
+        height:60px;
+        margin-top:-8%;
+        }
+        .settingprofile{
+        text-align:center;
+        }
+        .accordion {
+    
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 17.5vw;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+          height:120px;
+          margin-top:18px;
+          border-radius:20px;
+          margin-left:1px;
+                box-shadow: 0px 10px 10px -2px #888888;
+        text-align:center;
+        }
+        
+        .active, .accordion:hover {
+          background-color: #ccc;
+        }
+        .column {
+          float: left;
+          width: 33%;
+          padding: 10px;
+         
+        }
+          
+        .panel{
+          border-radius:30px;
+          margin-left:25px;
+        width:200px;
+          padding: 0 18px;
+          background-color:#fff;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          border-radius:30px;
+        }
+        li{
+        margin-left:-15%;
+        width:10vw;
+                box-shadow: 0px 5px 5px -2px #d3d3d3;
+        border-radius:5px;
+        margin-top:5px;
+        text-align:center;
+        line-height: 30px;
+        height:30px;
+        }
+        li:hover{
+        color:#00c4cc;
+        border-left:2px solid #00c4cc;
+        margin-left:-25%;
+          transition:0.2s ease-out;
+        
+        }
+        .headtext{
+          color:#888888;
+          font-size:18px;
+          margin-left:3%;
+          margin-top:15px;
+          }
+            .topictext{
+          margin-left:5%;
+          font-size:20px;
+          margin-top:0px;
+          }
+          .covidimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .newimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .bookmarkimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .categorytext{
+          margin-left:5%;
+          font-size:20px;
+          margin-top:5%;
+          }
+               
+            
+  
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  #stableheader{
+    display:absolute;
+    width: 60%;
+    height:100%;  
+    top:1;
+    right: 0;
+   
+    padding-bottom: 4vh;
+    border-radius:0px 0px 30px 30px;
+    box-shadow: 0px 5px 5px -2px #d3d3d3;
+    margin-left:20vw;
+
+  }
+  .fa-arrow-right{
+    color:#00c4cc;
+
+display: block;
+    font-size:20px;
+    margin-top:-3.5%;
+    margin-left:57vw;
+    }
+    .menucontent{
+      width:58%;
+      margin-left:21vw;
+      background-color:#fff;
+      height:calc(100vh - 8vh);
+      overflow-x: hidden;
+      border-top-right-radius: 4vh;
+      border-top-left-radius: 4vh;
+      }
+      .settingsbtn{
+        background-color:#fff;
+        margin-top:50px;
+        width:100%;
+        height:20%;
+        text-align:center;
+        }
+        .settingsimg{
+        width:60px;
+        height:60px;
+        margin-top:-8%;
+        }
+        .settingprofile{
+        text-align:center;
+        }
+        .accordion {
+    
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 17.5vw;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+          height:120px;
+          margin-top:18px;
+          border-radius:20px;
+          margin-left:1px;
+                box-shadow: 0px 10px 10px -2px #888888;
+        text-align:center;
+        }
+        
+        .active, .accordion:hover {
+          background-color: #ccc;
+        }
+        .column {
+          float: left;
+          width: 33%;
+          padding: 10px;
+         
+        }
+          
+        .panel{
+          border-radius:30px;
+          margin-left:25px;
+        width:200px;
+          padding: 0 18px;
+          background-color:#fff;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          border-radius:30px;
+        }
+        li{
+        margin-left:-15%;
+        width:10vw;
+                box-shadow: 0px 5px 5px -2px #d3d3d3;
+        border-radius:5px;
+        margin-top:5px;
+        text-align:center;
+        line-height: 30px;
+        height:30px;
+        }
+        li:hover{
+        color:#00c4cc;
+        border-left:2px solid #00c4cc;
+        margin-left:-25%;
+          transition:0.2s ease-out;
+        
+        }
+        .headtext{
+          color:#888888;
+          font-size:18px;
+          margin-left:3%;
+          margin-top:15px;
+          }
+            .topictext{
+          margin-left:5%;
+          font-size:20px;
+          margin-top:0px;
+          }
+          .covidimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .newimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .bookmarkimg{
+          margin-top:2%;
+          width:100px;
+          height:100px;
+          margin-right:10%;
+          margin-left:10%;
+          }
+          .categorytext{
+          margin-left:5%;
+          font-size:20px;
+          margin-top:5%;
+          }
+               
+            
+  
+}
+ 
+  
+  
+  
