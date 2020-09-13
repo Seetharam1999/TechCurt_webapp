@@ -19,12 +19,12 @@ class Main extends Component{
   render(){
     const {index}=this.state;
     return(
-
-     <SwipeableViews enableMouseEvents axis='x-reverse' containerStyle={{height:'667px',flexDirection:'row-reverse'}} index={index} onChangeIndex={this.handleChangeIndex}>
-        <News index={this.handleChangeIndex}/>
-        <Menu index={this.handleChangeIndex}/> 
+<Setting/>
+    //  <SwipeableViews enableMouseEvents axis='x-reverse' containerStyle={{height:'667px',flexDirection:'row-reverse'}} index={index} onChangeIndex={this.handleChangeIndex}>
+    //     <News index={this.handleChangeIndex}/>
+    //     <Menu index={this.handleChangeIndex}/> 
       
-      </SwipeableViews>
+    //   </SwipeableViews>
         
     )
 }
