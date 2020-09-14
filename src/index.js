@@ -7,7 +7,9 @@ import 'bootstrap-social/bootstrap-social.css';
 import './index.css';
 import './News.css'
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import './css/main.css'
+import './css/util.css';
+import registerServiceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

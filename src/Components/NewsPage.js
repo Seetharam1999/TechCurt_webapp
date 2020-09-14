@@ -20,7 +20,7 @@ class News extends Component {
 OxygenOS 10.5.10 is also rolling out for the OnePlus in a few flavors. For those in India, it will arrive as OxygenOS 10.5.9, in EU it's 10.5.8. There are a few minor alterations depending on the region too.
 OxygenOS 10.5.10 is also rolling out for the OnePlus in a few flavors. For those in India, it will arrive as OxygenOS 10.5.9, in EU it's 10.5.8. There are a few minor alterations depending on the region too.</p>
 
- <a href="#" className="swipeleft">Tap/Swipe left to read more at Cnet.com</a> 
+ <a  className="swipeleft">Tap/Swipe left to read more at Cnet.com</a> 
   </div>
   <div className="bottomlink">
 	

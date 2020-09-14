@@ -1,493 +1,1001 @@
-import React, { Component } from 'react';
+import React, { Component ,useState} from 'react';
 import Setting from './Settings';
 import '../menu.css'
+import { Link } from 'react-router-dom';
+import {Collapse,ListGroupItem,ListGroup} from 'reactstrap';
+import {Switch,Router,Route} from 'react-router-dom';
 
 class Menu extends Component{
-   Change=(e)=>{
+    constructor(props){
+      super(props);
+      this.state={
+        isOpen:false,
+        isOpen1:false,
+        isOpen2:false,
+        isOpen3:false,
+        isOpen4:false,
+        isOpen5:false,
+        isOpen6:false,
+        isOpen7:false,
+        isOpen8:false,
+        isOpen9:false,
+        isOpen10:false,
+        isOpen11:false,
+        isOpen12:false,
+        isOpen13:false,
+        isOpen14:false,
+        isOpen15:false,
+        isOpen16:false,
+        isOpen17:false
+      }
+    } 
+    toggle=()=>{
+      this.setState({
+        isOpen:!this.state.isOpen
+      })
+    }
+  Change=(e)=>{
    
     this.props.index(0);
    }
 
+
   render(){
-    return(
-        <div className="container-fulid">
-	<div id="stableheader">     
-  
-<i><h3 className="headtext">Explore</h3> 
-
-<i className="fa fa-arrow-right" onClick={this.Change.bind(this)}> </i></i>
-
- </div>
- 
- 
-
-  <div className="menucontent">
- 
-
-  <div className="settingsbtn">
-   <img className="settingsimg" src="/assets/images/menu.png" alt="setting"></img>
-   <a style={{textDecoration:'none'}} onClick={()=>alert('prompt to Settings Pahe')}><p className="settingprofile">Settings / Profile</p></a>
-  </div>
-  <div className="topics">
-      <h3 className="topictext"><b>Topics</b></h3>
-      
-    <div className="row p-2" style={{textAlign:'center'}}>
-      <div className="col-4">
-      <img className="covidimg" src="/assets/images/covid.png" alt="covid"></img>
-      <br/>
-      <span >Covid-19</span>
-
-      </div>
-      <div className="col-4">
-      <img className="newimg" src="/assets/images/news.png" alt="news"></img>
-        <br/>
-      <span >All News</span>
-  
-        </div>
-      <div className="col-4">
-
-      <img className="bookmarkimg" src="/assets/images/bookmark.png" alt="bookmark"></img>
    
-   <span >Bookmarks</span>
+    const menu=()=>{
+      return(
+        <div className="container-fulid">
+        <div id="stableheader">     
+        
+      <i><h3 className="headtext">Explore</h3> 
+      
+      <i className="fa fa-arrow-right" onClick={this.Change.bind(this)}> </i></i>
+      
+       </div>
+       
+       
+      
+        <div className="menucontent">
+       
+      
+        <div className="settingsbtn">
+         <img className="settingsimg" src="/assets/images/menu.png" alt="setting"></img>
+      
+         <Link to='/setting'><a style={{textDecoration:'none'}} ><p className="settingprofile">Settings / Profile</p>
+         </a></Link>
+        </div>
+        <div className="topics">
+            <h3 className="topictext"><b>Topics</b></h3>
+            
+          <div className="row p-2" style={{textAlign:'center'}}>
+            <div className="col-4">
+            <img className="covidimg" src="/assets/images/covid.png" alt="covid"></img>
+            <br/>
+            <span >Covid-19</span>
+      
+            </div>
+            <div className="col-4">
+            <img className="newimg" src="/assets/images/news.png" alt="news"></img>
+              <br/>
+            <span >All News</span>
+        
+              </div>
+            <div className="col-4">
+      
+            <img className="bookmarkimg" src="/assets/images/bookmark.png" alt="bookmark"></img>
+         
+         <span >Bookmarks</span>
+      
+            </div>
+          </div>
+          </div>
+        
+        <div className="categories">
+          <h3 className="categorytext"><b>Categories</b></h3>
+         {/* <div className="d-flex d-row">
+        
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+        
+            <button className="accordion one" onClick={this.toggle.bind(this)}>All Tech News</button>
+            <Collapse isOpen={this.state.isOpen}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+        
+          </div>
+        
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+            <button className="accordion two" onClick={()=>this.setState({
+              isOpen2:!this.state.isOpen2
+            })}>Tablets</button>
+            <Collapse isOpen={this.state.isOpen2}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+            <button className="accordion three"
+            onClick={()=>this.setState({
+              isOpen3:!this.state.isOpen3
+            })}>Cameras</button>
+            <Collapse isOpen={this.state.isOpe3}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          </div>
+          <div className="d-flex d-row">
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion four" onClick={()=>this.setState({
+            isOpen4:!this.state.isOpen4
+          })}>Cars</button>
+          <Collapse isOpen={this.state.isOpen4}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion five" onClick={()=>this.setState({
+            isOpen5:!this.state.isOpen5
+          })}>TV</button>
+          <Collapse isOpen={this.state.isOpen5}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion six" onClick={()=>this.setState({
+            isOpen6:!this.state.isOpen6
+          })}>Application</button>
+          <Collapse isOpen={this.state.isOpen6}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          </div>
+          <div className="d-flex d-row">
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          
+      <button className="accordion seven" onClick={()=>this.setState({
+            isOpen7:!this.state.isOpen7
+          })}>Mobile Phones</button>
+      <Collapse isOpen={this.state.isOpen7}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion eight"onClick={()=>this.setState({
+            isOpen8:!this.state.isOpen8
+          })}>Smart Homes</button>
+          <Collapse isOpen={this.state.isOpen8}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+     
+          <button className="accordion nine" onClick={()=>this.setState({
+            isOpen9:!this.state.isOpen9
+          })}>Gaming</button>
+          <Collapse isOpen={this.state.isOpen9}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          </div>
+          <div className="d-flex d-row">
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion ten" onClick={()=>this.setState({
+            isOpen10:!this.state.isOpen10
+          })}>Speaker</button>
+          <Collapse isOpen={this.state.isOpen10}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion eleven" onClick={()=>this.setState({
+            isOpen11:!this.state.isOpen11
+          })}>Drones</button>
+          <Collapse isOpen={this.state.isOpen11}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion twelve" onClick={()=>this.setState({
+            isOpen12:!this.state.isOpen12
+          })}>Appliances</button>
+          <Collapse isOpen={this.state.isOpen12}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          </div>
+          <div className="d-flex d-row">
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion thirteen" onClick={()=>this.setState({
+            isOpen13:!this.state.isOpen13
+          })}>Laptops</button>
+          <Collapse isOpen={this.state.isOpen13}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+            <button className="accordion fourteen">Headphones</button>
+            <Collapse isOpen={this.state.isOpen}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion fifteen">Desktop</button>
+          <Collapse isOpen={this.state.isOpen}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+          </div>
+          <div className="d-flex d-row">
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion sixteen">Streaming</button>
+          <Collapse isOpen={this.state.isOpen}>
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
 
+          </div>
+          <div className="col-4 col-sm-4 col-md-4 col-lg-4">
+          <button className="accordion seventeen">Wearables</button>
+          <Collapse isOpen={this.state.isOpen}>
+         
+            <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+               </Collapse>
+          </div>
+
+        </div> */}
+      <div className="column">
+      
+        <button className="accordion one" onClick={(e)=>{
+          
+          return (this.setState({isOpen:!this.state.isOpen}))
+        }}>All Tech News</button>
+      
+      <Collapse isOpen={this.state.isOpen}>
+        <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+   </Collapse>
+      
+      <button className="accordion two" onClick={()=>this.setState({isOpen2:!this.state.isOpen2})}>Tablets</button>
+      
+     <Collapse isOpen={this.state.isOpen2}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+  </Collapse>
+      
+      <button className="accordion three" onClick={()=>this.setState({isOpen3:!this.state.isOpen3})}>Cameras</button>
+      < Collapse isOpen={this.state.isOpen3}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+ </ Collapse>
+      
+      <button className="accordion four" onClick={()=>this.setState({isOpen4:!this.state.isOpen4})}>Cars</button>
+      <Collapse isOpen={this.state.isOpen4}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+</Collapse>
+      
+      <button className="accordion five" onClick={()=>this.setState({isOpen5:!this.state.isOpen5})}>TV</button>
+      <Collapse isOpen={this.state.isOpen5}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+   </Collapse>
+      
+      
+      
+        <button className="accordion six" onClick={()=>this.setState({isOpen6:!this.state.isOpen6})}>Application</button>
+      <Collapse isOpen={this.state.isOpen6}>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+     </Collapse>
       </div>
-    </div>
-    </div>
-  
-  <div className="categories">
-    <h3 className="categorytext"><b>Categories</b></h3>
-<div className="column">
-
-	<button className="accordion one">All Tech News</button>
-
-<div className="panel">
-  <ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-</div>
-
-<button className="accordion two">Tablets</button>
-
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-
-<button className="accordion three">Cameras</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-
-<button className="accordion four">Cars</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-
-<button className="accordion five">TV</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-
-
-
-	<button className="accordion six">Application</button>
-<div className="panel">
-  <ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-</div>
-
-<div className="column">
-
-<button className="accordion seven">Mobile Phones</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul></div>
-
-<button className="accordion eight">Smart Homes</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul></div>
-
-<button className="accordion nine">Gaming</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-
-
-
-	<button className="accordion ten">Speaker</button>
-<div className="panel">
-  <ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-</div>
-
-<button className="accordion eleven">Drones</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-
-<button className="accordion twelve">Appliances</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-  </div>
-
-<div className="column">
-
-<button className="accordion thirteen">Laptops</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-
-
-
-	<button className="accordion fourteen">Headphones</button>
-<div className="panel">
-  <ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-</div>
-
-<button className="accordion fifteen">Desktop</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-
-<button className="accordion sixteen">Streaming</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-
-<button className="accordion seventeen">Wearables</button>
-<div className="panel">
-<ul style={{listStyleType:'none'}}>
-  <li>All</li>
-    <li>Startups</li>
-  <li>5G</li>
-  <li>Cybersecurity</li>
-  <li>IoT</li>
-  <li>Google</li>
-  <li>Apple</li>
-    <li>Microsoft</li>
-  <li>Facebook</li>
-  <li>Amazon</li>
-  <li>Tesla</li>
-  <li>Samsung</li>
-  <li>Huawei</li>
-  <li>Xiaomi</li>
-  <li>Oneplus</li>
-
-
-  </ul>
-  </div>
-  </div>
-
-
-{/* <script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-</script> */}
-		
-  
-  </div>
-  
- </div>
-  
-
-</div> 
-
+      
+      <div className="column">
+      
+      <button className="accordion seven" onClick={()=>this.setState({isOpen7:!this.state.isOpen7})}>Mobile Phones</button>
+   <Collapse isOpen={this.state.isOpen7}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul></Collapse>
+      
+      <button className="accordion eight" onClick={()=>this.setState({isOpen8:!this.state.isOpen8})}>Smart Homes</button>
+        <Collapse isOpen={this.state.isOpen8}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul></Collapse>
+      
+      <button className="accordion nine" onClick={()=>this.setState({isOpen9:!this.state.isOpen9})}>Gaming</button>
+      <Collapse isOpen={this.state.isOpen9}>
+              <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+        </Collapse>
+      
+      
+      
+        <button className="accordion ten" onClick={()=>this.setState({isOpen10:!this.state.isOpen10})}>Speaker</button>
+      <Collapse isOpen={this.state.isOpen10}>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+      </Collapse>
+      
+      <button className="accordion eleven" onClick={()=>this.setState({isOpen11:!this.state.isOpen11})}>Drones</button>
+      <Collapse isOpen={this.state.isOpen11}>
+             <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+        </Collapse>
+      
+      <button className="accordion twelve" onClick={()=>this.setState({isOpen12:!this.state.isOpen12})}>Appliances</button>
+      <Collapse isOpen={this.state.isOpen12}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+        </Collapse>
+        </div>
+      
+      <div className="column">
+      
+      <button className="accordion thirteen" onClick={()=>this.setState({isOpen13:!this.state.isOpen13})}>Laptops</button>
+      <Collapse isOpen={this.state.isOpen13}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+        </Collapse>
+      
+      
+      
+        <button className="accordion fourteen" onClick={()=>this.setState({isOpen14:!this.state.isOpen14})}>Headphones</button>
+     <Collapse isOpen={this.state.isOpen14}>
+               <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+      </Collapse>
+      
+      <button className="accordion fifteen" onClick={()=>this.setState({isOpen15:!this.state.isOpen15})}>Desktop</button>
+     <Collapse isOpen={this.state.isOpen15}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+        </Collapse>
+      
+      <button className="accordion sixteen" onClick={()=>this.setState({isOpen16:!this.state.isOpen16})}>Streaming</button>
+      <Collapse isOpen={this.state.isOpen16}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+        </Collapse>
+      
+      <button className="accordion seventeen" onClick={()=>this.setState({isOpen17:!this.state.isOpen17})}>Wearables</button>
+      <Collapse isOpen={this.state.isOpen17}>
+      <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+        </Collapse>
+        </div>
+      
+      
+      {/* <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+      </script> */}
+          
+        
+        </div>
+        
+       </div>
+        
+      
+      </div> 
+      
+      )
+    }
+    return(
+    <Switch>
+     
+      <Route exact path='/menu' component={menu}/>
+      <Route exact path='/setting' component={()=><Setting
+       auth={this.props.auth} 
+       loginUser={this.props.loginUser} 
+       logoutUser={this.props.logoutUser}
+       googleLogin={this.props.googleLogin}
+      />}/>
+    </Switch>
+       
 
       
     )
