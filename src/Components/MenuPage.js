@@ -563,7 +563,7 @@ class Menu extends Component{
       <Accordion allowZeroExpanded >
             <AccordionItem >
                 <AccordionItemHeading className="accordion one" >
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
                     All Tech News
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -591,7 +591,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion two">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
                     Tablets
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -619,7 +619,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion three">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
                     Cameras
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -647,7 +647,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion four">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
                     Cars
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -675,7 +675,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion five">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
                     TV
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -703,7 +703,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion six">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
                     Application
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -735,7 +735,7 @@ class Menu extends Component{
               <Accordion allowZeroExpanded>
             <AccordionItem>
                 <AccordionItemHeading className="accordion seven">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
                  Mobile Phones
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -763,7 +763,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion eight">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
                     Smart Homes
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -791,7 +791,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion nine">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
                 Gaming
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -819,7 +819,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion ten">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
                Speakers
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -847,7 +847,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion eleven">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
               Drones
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -875,7 +875,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion twelve">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
               Appliances
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -904,10 +904,10 @@ class Menu extends Component{
         </Accordion>
       </div>
       <div className="column">
-        <Accordion>
+        <Accordion allowZeroExpanded>
         <AccordionItem>
                 <AccordionItemHeading className="accordion thirteen">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
             Laptops
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -936,7 +936,7 @@ class Menu extends Component{
           
             <AccordionItem>
                 <AccordionItemHeading className="accordion fifteen">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
             Desktop
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -964,7 +964,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion sixteen">
-                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                      <AccordionItemButton style={{paddingTop:"50px"}}>
              Streaming
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -992,7 +992,7 @@ class Menu extends Component{
             </AccordionItem>
             <AccordionItem>
                 <AccordionItemHeading className="accordion seventeen">
-                <AccordionItemButton style={{paddingTop:"30px"}}>
+                <AccordionItemButton style={{paddingTop:"50px"}}>
                     Wearables
                     </AccordionItemButton>
                 </AccordionItemHeading>
@@ -1020,7 +1020,7 @@ class Menu extends Component{
             </AccordionItem>
                <AccordionItem>
                 <AccordionItemHeading className="accordion seventeen">
-                    <AccordionItemButton style={{paddingTop:"30px"}}>
+                    <AccordionItemButton style={{paddingTop:"50px"}}>
                     HeadPhone
                     </AccordionItemButton>
                 </AccordionItemHeading>
