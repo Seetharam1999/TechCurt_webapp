@@ -23,7 +23,7 @@ export const loginError = (message) => {
 export const loginUser = (creds) => (dispatch) => {
     // We dispatch requestLogin to kickoff the call to the API
     dispatch(requestLogin(creds))
-
+    console.log(creds.username,creds.password);
     return auth.signInWithEmailAndPassword(creds.username, creds.password)
     .then(() => {
         var user = auth.currentUser;

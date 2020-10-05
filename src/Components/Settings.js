@@ -14,7 +14,8 @@ class Setting extends Component {
         this.handleGoogleLogin = this.handleGoogleLogin.bind(this);
         this.state={
             isModel:false,
-            value: 0 
+            value: 0 ,
+        
         }
     }
     toggleModel(){
@@ -29,7 +30,7 @@ class Setting extends Component {
      e.preventDefault();
  }
  handleGoogleLogin(event) {
-  this.toggleModal();
+  console.log('google login clicked')
   this.props.googleLogin();
   event.preventDefault();
 }
@@ -41,18 +42,30 @@ handleLogout() {
     return(
       
       <Container>
+        
         <Row>
           <Col xs={{size:12}} sm={{size:12}} md={{ size: 8, offset: 1 }} lg={{size:6,offset:2}}>
           <Link to='/menu'><a  ><i className="fa fa-arrow-left" href='/menu'style={{fontSize:"24px",marginTop:'9px'}}></i></a></Link>
           </Col>
         </Row>
+        { !this.props.auth.isAuthenticated ?
+         
           <Row>
               <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
                      <p > Hey Pal</p>
                 <img src="/assets/images/avatar3.png"  alt="avatar" className="avatar"/>
               </Col>
           </Row>
-          <Row className="login">
+         :
+         <Row>
+              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
+                     <p >  {this.props.auth.user.displayName}</p>
+                <img src={this.props.auth.user.photoURL}  alt="avatar" className="avatar"/>
+              </Col>
+          </Row>
+         
+         
+        } <Row className="login">
               <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
             
                   <p className="signup">
@@ -67,7 +80,7 @@ handleLogout() {
                 <a className="btn" ><span className="fa fa-google fa-lg" ></span></a>
             <a className="btn"><span className="fa fa-facebook fa-lg"></span></a>
                             
-            <i className="btn " onClick={this.handleGoogleLogin} ><span className="fa fa-twitter fa-lg"></span></i>
+            <a className="btn btn-rounded" onClick={this.handleGoogleLogin} ><span className="fa fa-twitter fa-lg"></span></a>
             <i className="btn btn-rounded" onClick={this.toggleModel}><span className="fa fa-envelope fa-lg"></span></i>
                 </div>
 

@@ -2,32 +2,44 @@ import React, { Component ,useState} from 'react';
 import Setting from './Settings';
 import '../menu.css'
 import { Link } from 'react-router-dom';
-import {Collapse,ListGroupItem,ListGroup} from 'reactstrap';
+import {Button,Collapse} from 'reactstrap'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
+
+
 import {Switch,Router,Route} from 'react-router-dom';
 
 class Menu extends Component{
     constructor(props){
       super(props);
-      this.state={
-        isOpen:false,
-        isOpen1:false,
-        isOpen2:false,
-        isOpen3:false,
-        isOpen4:false,
-        isOpen5:false,
-        isOpen6:false,
-        isOpen7:false,
-        isOpen8:false,
-        isOpen9:false,
-        isOpen10:false,
-        isOpen11:false,
-        isOpen12:false,
-        isOpen13:false,
-        isOpen14:false,
-        isOpen15:false,
-        isOpen16:false,
-        isOpen17:false
-      }
+      this.state=[
+        {
+          id:0,
+          title:"All News",
+          content:[
+            "All","5G","CyberSecurity"
+          ]
+        },
+        {
+          id:1,
+          title:"All News",
+          content:[
+            "All","5G","CyberSecurity"
+          ]
+        },
+        {
+          id:2,
+          title:"All News",
+          content:[
+            "All","5G","CyberSecurity"
+          ]
+        },
+      ]
     } 
     toggle=()=>{
       this.setState({
@@ -41,10 +53,10 @@ class Menu extends Component{
 
 
   render(){
-   
+   const items=this.state
     const menu=()=>{
       return(
-        <div className="container-fulid">
+        <div className="container-fulid" style={{width:'90vw'}}>
         <div id="stableheader">     
         
       <i><h3 className="headtext">Explore</h3> 
@@ -548,13 +560,503 @@ class Menu extends Component{
 
         </div> */}
       <div className="column">
+      <Accordion allowZeroExpanded >
+            <AccordionItem >
+                <AccordionItemHeading className="accordion one" >
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                    All Tech News
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
       
-        <button className="accordion one" onClick={(e)=>{
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion two">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                    Tablets
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion three">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                    Cameras
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion four">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                    Cars
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion five">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                    TV
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion six">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                    Application
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            </Accordion>
+            </div>
+            <div className="column">
+              <Accordion allowZeroExpanded>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion seven">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                 Mobile Phones
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion eight">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                    Smart Homes
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion nine">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+                Gaming
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion ten">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+               Speakers
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion eleven">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+              Drones
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion twelve">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+              Appliances
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+        </Accordion>
+      </div>
+      <div className="column">
+        <Accordion>
+        <AccordionItem>
+                <AccordionItemHeading className="accordion thirteen">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+            Laptops
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
           
-          return (this.setState({isOpen:!this.state.isOpen}))
-        }}>All Tech News</button>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion fifteen">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+            Desktop
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
       
-      <Collapse isOpen={this.state.isOpen}>
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion sixteen">
+                      <AccordionItemButton style={{paddingTop:"30px"}}>
+             Streaming
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+            <AccordionItem>
+                <AccordionItemHeading className="accordion seventeen">
+                <AccordionItemButton style={{paddingTop:"30px"}}>
+                    Wearables
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+               <AccordionItem>
+                <AccordionItemHeading className="accordion seventeen">
+                    <AccordionItemButton style={{paddingTop:"30px"}}>
+                    HeadPhone
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                <ul style={{listStyleType:'none'}}>
+        <li>All</li>
+          <li>Startups</li>
+        <li>5G</li>
+        <li>Cybersecurity</li>
+        <li>IoT</li>
+        <li>Google</li>
+        <li>Apple</li>
+          <li>Microsoft</li>
+        <li>Facebook</li>
+        <li>Amazon</li>
+        <li>Tesla</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Xiaomi</li>
+        <li>Oneplus</li>
+      
+      
+        </ul>
+                </AccordionItemPanel>
+            </AccordionItem>
+        </Accordion>
+       
+      </div>
+
+{/*       
+       <Button className="accordion one" onClick={(e)=>{
+          
+        this.setState({isOpen:!this.state.isOpen})
+        }}>All Tech News</Button>
+      
+        {this.state.isOpen &&
         <ul style={{listStyleType:'none'}}>
         <li>All</li>
           <li>Startups</li>
@@ -574,7 +1076,7 @@ class Menu extends Component{
       
       
         </ul>
-   </Collapse>
+    }
       
       <button className="accordion two" onClick={()=>this.setState({isOpen2:!this.state.isOpen2})}>Tablets</button>
       
@@ -600,7 +1102,7 @@ class Menu extends Component{
         </ul>
   </Collapse>
       
-      <button className="accordion three" onClick={()=>this.setState({isOpen3:!this.state.isOpen3})}>Cameras</button>
+      <button className="accordion three" onClick={()=>this.setState({isOpen3:!this.state.isOpen3})}></button>
       < Collapse isOpen={this.state.isOpen3}>
       <ul style={{listStyleType:'none'}}>
         <li>All</li>
@@ -954,7 +1456,7 @@ class Menu extends Component{
       
         </ul>
         </Collapse>
-        </div>
+        </div> */}
       
       
       {/* <script>
