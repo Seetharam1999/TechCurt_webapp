@@ -74,3 +74,33 @@ export const googleLogin = () => (dispatch) => {
             dispatch(loginError(error.message));
         });
 }
+export const facbookLogin = () => (dispatch) => {
+    const provider = new fireauth.GoogleAuthProvider();
+
+    auth.signInWithPopup(provider)
+        .then((result) => {
+            var user = result.user;
+            localStorage.setItem('user', JSON.stringify(user));
+            // Dispatch the success action
+           
+            dispatch(receiveLogin(user));
+        })
+        .catch((error) => {
+            dispatch(loginError(error.message));
+        });
+}
+export const twitterLogin = () => (dispatch) => {
+    const provider = new fireauth.GoogleAuthProvider();
+
+    auth.signInWithPopup(provider)
+        .then((result) => {
+            var user = result.user;
+            localStorage.setItem('user', JSON.stringify(user));
+            // Dispatch the success action
+           
+            dispatch(receiveLogin(user));
+        })
+        .catch((error) => {
+            dispatch(loginError(error.message));
+        });
+}
