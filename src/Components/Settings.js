@@ -5,6 +5,9 @@ import {Link} from 'react-router-dom';
 
 import { Col, Container, Row ,Modal,ModalBody,Input} from 'reactstrap';
 import '../Settings.css';
+import ReactFlagsSelect from 'react-flags-select';
+
+import 'react-flags-select/css/react-flags-select.css';
 class Setting extends Component {
 
     constructor(props){
@@ -61,23 +64,14 @@ handleLogout() {
           </Col>
         </Row>
         { !this.props.auth.isAuthenticated ?
-         
+         <div>
           <Row>
               <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
                      <p > Hey Pal</p>
                 <img src="/assets/images/avatar3.png"  alt="avatar" className="avatar"/>
               </Col>
           </Row>
-         :
-         <Row>
-              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
-                     <p >  {this.props.auth.user.displayName}</p>
-                <img src={this.props.auth.user.photoURL}  alt="avatar" className="avatar"/>
-              </Col>
-          </Row>
-         
-         
-        } <Row className="login">
+          <Row className="login">
               <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
             
                   <p className="signup">
@@ -85,6 +79,7 @@ handleLogout() {
       				  	</p>
               </Col>
           </Row>
+          
          <Row >
 
          <Col xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}} >
@@ -98,6 +93,34 @@ handleLogout() {
 
          </Col>
          </Row>
+          </div>
+         :
+         <div>
+         <Row>
+              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
+                     <p >  {this.props.auth.user.displayName}</p>
+                <img src={this.props.auth.user.photoURL}  alt="avatar" className="avatar"/>
+              </Col>
+          </Row>
+          <Row className="login">
+              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
+            
+                  <p className="signup">
+ 						      	To save your likes & Bookmarks
+      				  	</p>
+              </Col>
+          </Row>
+          
+         <Row >
+
+         <Col xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}} >
+         <a className="btn" onClick={this.handleLogout} ><span > Logout</span></a>
+         </Col>
+         </Row>
+         </div>
+         
+        }
+        
          <hr className="new2"/>
          <Row >
          
@@ -124,6 +147,18 @@ handleLogout() {
         
          </Col>
          </Row>
+         <Row >
+         <Col xs={{size:5,offset:1}} sm={{ size: 5,offset:2, }} md={{size:5,offset:2}} lg={{size:4,offset:3}}><p>Country</p></Col>
+         <Col xs={{size:5,offset:1}} sm={{ size: 4, offset:1}}md={{size:5,offset:2}} lg="auto"className="switch">
+         <ReactFlagsSelect
+    defaultCountry="IN"
+    showSelectedLabel={true}
+  style={{width:'33vw'}}
+    />
+        
+         </Col>
+         </Row>
+        
          <hr className="new2"/>
          <Row>
            <Col sm={{size:12,offset:2}} xs={{size:12,offset:1}} lg={{size:4,offset:3}}>

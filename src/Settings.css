@@ -55,6 +55,9 @@ a{
   color:#00c4cc;
   text-decoration:none;
   }
+  .flag-select__options {
+    width: 33vw;
+  }
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
   .social{
