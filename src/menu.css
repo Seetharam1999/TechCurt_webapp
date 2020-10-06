@@ -158,12 +158,11 @@
 @media (max-width: 575.98px) {
   #stableheader{
     display:inline-block;
-    width: 100%;
-    height:100%;  
+    width: 100vw;
+    height:22vw;  
     top:1;
     right: 0;
     left:0;
-    padding-bottom: 4vh;
     border-radius:0px 0px 30px 30px;
     box-shadow: 0px 5px 5px -2px #d3d3d3;
 
@@ -173,11 +172,11 @@
 position: relative;
 display: block;
     font-size:20px;
-    margin-top:-7%;
-    margin-left:78vw;
+    margin-top:-10%;
+    margin-left:84vw;
     }
     .menucontent{
-      width:100%;
+      width:100vw;
       background-color:#fff;
       height:98vh;
       overflow-x: hidden;
@@ -517,7 +516,7 @@ display: block;
 @media (min-width: 576px) and (max-width: 767.98px) {
   #stableheader{
     display:absolute;
-    width: 60%;
+    width: 60vw;
     height:100%;  
     top:1;
     right: 0;
@@ -533,11 +532,11 @@ display: block;
 
 display: block;
     font-size:20px;
-    margin-top:-6%;
-    margin-left:54vw;
+    margin-top:-10%;
+    margin-left:53vw;
     }
     .menucontent{
-      width:58%;
+      width:60vw;
       margin-left:21vw;
       background-color:#fff;
       height:calc(100vh - 8vh);
@@ -826,7 +825,7 @@ display: block;
 display: block;
     font-size:20px;
     margin-top:-6%;
-    margin-left:54vw;
+    margin-left:50vw;
     }
     .menucontent{
       width:58%;
@@ -972,7 +971,7 @@ display: block;
 display: block;
     font-size:20px;
     margin-top:-3.5%;
-    margin-left:57vw;
+    margin-left:50vw;
     }
     .menucontent{
       width:58%;
