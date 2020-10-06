@@ -280,26 +280,23 @@ class Menu extends Component{
             <AccordionItem>
                 <AccordionItemHeading className="accordion seven">
                       <AccordionItemButton style={{paddingTop:"50px"}}>
-                 Mobile Phones
+               Daily News
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
-                <ul style={{listStyleType:'none'}}>
-        <li>All</li>
-          <li>Startups</li>
-        <li>5G</li>
-        <li>Cybersecurity</li>
-        <li>IoT</li>
-        <li>Google</li>
-        <li>Apple</li>
-          <li>Microsoft</li>
-        <li>Facebook</li>
-        <li>Amazon</li>
-        <li>Tesla</li>
-        <li>Samsung</li>
-        <li>Huawei</li>
-        <li>Xiaomi</li>
-        <li>Oneplus</li>
+                <ul style={{listStyleType:'none',marginLeft:'3vw'}}>
+        <li>International</li>
+          <li>Finance</li>
+        <li>Science</li>
+        <li>Entertainment</li>
+        <li>Food</li>
+        <li>Health</li>
+        <li>Travel</li>
+          <li>Politics</li>
+        <li>Sports</li>
+        <li>Fashion</li>
+        <li>Education</li>
+       
       
       
         </ul>
