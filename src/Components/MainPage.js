@@ -1,11 +1,11 @@
 import React ,{Component}from 'react';
-import SwipeableViews from 'react-swipeable-views';
+
 import Menu from './MenuPage';
 import News from './NewsPage';
 import { connect } from 'react-redux';
-import{logoutUser,loginUser,googleLogin} from '../redux/ActionCreater'
+import{logoutUser,loginUser,googleLogin,facebookLogin,twitterLogin} from '../redux/ActionCreater'
 import SwipeableRoutes from "react-swipeable-routes";
-import {Switch,Router,Route,withRouter} from 'react-router-dom';
+import {Switch,Route,withRouter} from 'react-router-dom';
 
 const mapStateToProps = state => {
   return {
@@ -19,7 +19,8 @@ const mapDispatchToProps = (dispatch) => ({
   logoutUser: () => dispatch(logoutUser()),
   
   googleLogin: () => dispatch(googleLogin()),
-  
+  facebookLogin:()=>dispatch(facebookLogin()),
+  twitterLogin:()=>dispatch(twitterLogin()),
 });
 
 class Main extends Component{
@@ -32,9 +33,9 @@ class Main extends Component{
   }
 
   componentDidMount() {
+
    
   }
-
   componentWillUnmount() {
     this.props.logoutUser();
   }
@@ -54,7 +55,8 @@ class Main extends Component{
                loginUser={this.props.loginUser} 
                logoutUser={this.props.logoutUser}
                googleLogin={this.props.googleLogin}
-            
+              facebookLogin={this.props.facebookLogin}
+              twitterLogin={this.props.twitterLogin}
             />}/>
             
          </SwipeableRoutes>

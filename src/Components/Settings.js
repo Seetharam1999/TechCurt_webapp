@@ -12,6 +12,8 @@ class Setting extends Component {
         this.toggleModel=this.toggleModel.bind(this);
         this.isHandleLogin=this.isHandleLogin.bind(this);
         this.handleGoogleLogin = this.handleGoogleLogin.bind(this);
+      this.handleFacebookLogin=this.handleFacebookLogin.bind(this);
+      this.handleTwitterLogin=this.handleTwitterLogin.bind(this);
         this.state={
             isModel:false,
             value: 0 ,
@@ -32,6 +34,16 @@ class Setting extends Component {
  handleGoogleLogin(event) {
   console.log('google login clicked')
   this.props.googleLogin();
+  event.preventDefault();
+}
+handleFacebookLogin(event) {
+  console.log('facebook login clicked')
+  this.props.facebookLogin();
+  event.preventDefault();
+}
+handleTwitterLogin(event) {
+  console.log('twitter login clicked')
+  this.props.twitterLogin();
   event.preventDefault();
 }
 
@@ -77,10 +89,10 @@ handleLogout() {
 
          <Col xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}} >
                <div className="social">
-                <a className="btn" ><span className="fa fa-google fa-lg" ></span></a>
-            <a className="btn"><span className="fa fa-facebook fa-lg"></span></a>
+                <a className="btn" onClick={this.handleGoogleLogin} ><span className="fa fa-google fa-lg" ></span></a>
+            <a className="btn" onClick={this.handleFacebookLogin}><span className="fa fa-facebook fa-lg"></span></a>
                             
-            <a className="btn btn-rounded" onClick={this.handleGoogleLogin} ><span className="fa fa-twitter fa-lg"></span></a>
+            <a className="btn btn-rounded"   onClick={this.handleTwitterLogin}><span className="fa fa-twitter fa-lg"></span></a>
             <i className="btn btn-rounded" onClick={this.toggleModel}><span className="fa fa-envelope fa-lg"></span></i>
                 </div>
 
@@ -154,6 +166,7 @@ handleLogout() {
 								 <div class="wrap-input100 validate-input" data-validate="Password is required"> 
 								 <span class="label-input100">Password</span>
                  <Input type="password" className="input100"
+                 autocomplete={false}
                   style={{border:'none'}}
                                 innerRef={(input)=>this.password=input}
                                 id="password" name="password" placeholder="Type your password"/> 

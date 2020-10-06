@@ -24,15 +24,37 @@ export const loginUser = (creds) => (dispatch) => {
     // We dispatch requestLogin to kickoff the call to the API
     dispatch(requestLogin(creds))
     console.log(creds.username,creds.password);
-    return auth.signInWithEmailAndPassword(creds.username, creds.password)
-    .then(() => {
-        var user = auth.currentUser;
-        localStorage.setItem('user', JSON.stringify(user));
-        // Dispatch the success action
-      
-        dispatch(receiveLogin(user));
+    return auth.createUserWithEmailAndPassword(creds.username, creds.password)
+    .then(dataBeforeEmail => {
+        auth.onAuthStateChanged(function(user) {
+          user.sendEmailVerification();
+        });
     })
-    .catch(error => dispatch(loginError(error.message)))
+    .then(dataAfterEmail => {
+        auth.onAuthStateChanged(function(user) {
+          if (user.emailVerified) {
+          
+            dispatch(receiveLogin(user));
+          } else {
+            
+            dispatch({
+              type:ActionTypes.LOGIN_FAILURE,
+              payload:
+                "Something went wrong, we couldn't create your account. Please try again."
+            });
+        }
+        });
+    })
+
+    // .then(() => {
+
+    //     var user = auth.currentUser;
+    //     localStorage.setItem('user', JSON.stringify(user));
+       
+      
+    //     dispatch(receiveLogin(user));
+    // })
+    // .catch(error => dispatch(loginError(error.message)))
 };
 
 export const requestLogout = () => {
@@ -74,8 +96,8 @@ export const googleLogin = () => (dispatch) => {
             dispatch(loginError(error.message));
         });
 }
-export const facbookLogin = () => (dispatch) => {
-    const provider = new fireauth.GoogleAuthProvider();
+export const facebookLogin = () => (dispatch) => {
+    const provider = new fireauth.FacebookAuthProvider();
 
     auth.signInWithPopup(provider)
         .then((result) => {
@@ -90,7 +112,7 @@ export const facbookLogin = () => (dispatch) => {
         });
 }
 export const twitterLogin = () => (dispatch) => {
-    const provider = new fireauth.GoogleAuthProvider();
+    const provider = new fireauth.TwitterAuthProvider();
 
     auth.signInWithPopup(provider)
         .then((result) => {

@@ -1,8 +1,7 @@
-import React, { Component ,useState} from 'react';
+import React, { Component } from 'react';
 import Setting from './Settings';
 import '../menu.css'
 import { Link } from 'react-router-dom';
-import {Button,Collapse} from 'reactstrap'
 import {
   Accordion,
   AccordionItem,
@@ -12,7 +11,7 @@ import {
 } from 'react-accessible-accordion';
 
 
-import {Switch,Router,Route} from 'react-router-dom';
+import {Switch,Route} from 'react-router-dom';
 
 class Menu extends Component{
     constructor(props){
@@ -613,6 +612,8 @@ class Menu extends Component{
        loginUser={this.props.loginUser} 
        logoutUser={this.props.logoutUser}
        googleLogin={this.props.googleLogin}
+       facebookLogin={this.props.facebookLogin}
+       twitterLogin={this.props.twitterLogin}
       />}/>
     </Switch>
        
