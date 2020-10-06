@@ -66,13 +66,13 @@ handleLogout() {
         { !this.props.auth.isAuthenticated ?
          <div>
           <Row>
-              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
+              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 5 }} lg={{size:6,offset:6}}>
                      <p > Hey Pal</p>
                 <img src="/assets/images/avatar3.png"  alt="avatar" className="avatar"/>
               </Col>
           </Row>
           <Row className="login">
-              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
+              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 5 }} lg={{size:6,offset:6}}>
             
                   <p className="signup">
  						      	To save your likes & Bookmarks
@@ -82,7 +82,7 @@ handleLogout() {
           
          <Row >
 
-         <Col xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}} >
+         <Col xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 4 }} lg={{size:6,offset:6}} >
                <div className="social">
                 <a className="btn" onClick={this.handleGoogleLogin} ><span className="fa fa-google fa-lg" ></span></a>
             <a className="btn" onClick={this.handleFacebookLogin}><span className="fa fa-facebook fa-lg"></span></a>
@@ -97,23 +97,20 @@ handleLogout() {
          :
          <div>
          <Row>
-              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
+              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 5 }} lg={{size:6,offset:6}}>
                      <p >  {this.props.auth.user.displayName}</p>
                 <img src={this.props.auth.user.photoURL}  alt="avatar" className="avatar"/>
               </Col>
           </Row>
           <Row className="login">
-              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}}>
-            
-                  <p className="signup">
- 						      	To save your likes & Bookmarks
-      				  	</p>
+              <Col  xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 5 }} lg={{size:6,offset:6}}>
+        
               </Col>
           </Row>
           
          <Row >
 
-         <Col xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 3 }} lg={{size:6,offset:6}} >
+         <Col xs={{size:12,offset:4}} sm={{size:12,offset:6}} md={{ size: 8, offset: 4 }} lg={{size:6,offset:6}} >
          <a className="btn" onClick={this.handleLogout} ><span > Logout</span></a>
          </Col>
          </Row>
@@ -125,14 +122,14 @@ handleLogout() {
          <Row >
          
                 <Col xs={{size:5,offset:1}} sm={{ size: 5,offset:2 }} md={{size:5,offset:1}} lg={{size:4,offset:3}}><p>Notification</p></Col>
-              <Col xs={{size:4,offset:2}} sm={{ size: 4, offset:1}}md={{size:5,offset:1}} lg={{size:4}} className="switch">
+              <Col xs={{size:4,offset:2}} sm={{ size: 4, offset:1}}md={{size:5,offset:1}} lg={{size:2}} className="switch">
                 <Switch value={this.state.value}
                     onChange={value => this.setState({ value })}/>
                 </Col>
          </Row>
          <Row >
-         <Col xs={{size:5,offset:1}} sm={{ size: 5,offset:2, }} md={{size:5,offset:2}} lg={{size:4,offset:3}}><p>Languages</p></Col>
-         <Col xs={{size:5,offset:1}} sm={{ size: 4, offset:1}}md={{size:5,offset:2}} lg="auto"className="switch">
+         <Col xs={{size:5,offset:1}} sm={{ size: 5,offset:2, }} md={{size:5,offset:1}} lg={{size:4,offset:3}}><p>Languages</p></Col>
+         <Col xs={{size:4,offset:1}} sm={{ size: 4, }}md={{size:5,offset:1}} lg={{size:2}} className="switch">
           <select>
             <option>
               English
@@ -148,12 +145,12 @@ handleLogout() {
          </Col>
          </Row>
          <Row >
-         <Col xs={{size:5,offset:1}} sm={{ size: 5,offset:2, }} md={{size:5,offset:2}} lg={{size:4,offset:3}}><p>Country</p></Col>
-         <Col xs={{size:5,offset:1}} sm={{ size: 4, offset:1}}md={{size:5,offset:2}} lg="auto"className="switch">
+         <Col xs={{size:5,offset:1}} sm={{ size: 5,offset:2, }} md={{size:5,offset:1}} lg={{size:4,offset:3}}><p>Country</p></Col>
+         <Col xs={{size:4,offset:1}} sm={{ size: 4, }}md={{size:5,offset:1}} lg={{size:2}} className="switch">
          <ReactFlagsSelect
     defaultCountry="IN"
     showSelectedLabel={true}
-  style={{width:'33vw'}}
+  style={{width:'98%'}}
     />
         
          </Col>

@@ -55,6 +55,10 @@ a{
   color:#00c4cc;
   text-decoration:none;
   }
+  .flag-select{
+    width: max-content;
+    margin-left: -19px;
+  }
   .flag-select__options {
     width: 33vw;
   }
